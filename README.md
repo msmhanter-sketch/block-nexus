@@ -1,16 +1,37 @@
-# React + Vite
+# BlockNexus VR — Blockchain Simulation Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивная VR-симуляция архитектуры блокчейна, разработанная специально для хакатона. Проект наглядно демонстрирует ключевые принципы работы децентрализованных систем, государственного реестра и механизмов консенсуса.
 
-Currently, two official plugins are available:
+## 🚀 Как запустить
+Проект собран в виде самостоятельного Windows-приложения. Ссылку на скачивание `.exe` файла вы найдете в описании к репозиторию или в сопроводительном письме.
+*   **BlockNexus 0.0.0.exe** — портативная версия (запуск без установки).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎮 Управление
 
-## React Compiler
+### На компьютере (Desktop mode):
+*   **W / A / S / D** — свободный полет и передвижение в пространстве.
+*   **Мышь (Зажать левую кнопку)** — вращение камеры вокруг объекта.
+*   **Колесо мыши** — приближение и отдаление (Zoom).
+*   **Клавиши 1, 2, 3, 4** — мгновенное переключение между обучающими сценами.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### В VR-шлеме (Meta Quest 2/3/Pro, SteamVR):
+*   **Левый стик** — плавное передвижение (Flight).
+*   **Правый стик** — дискретный поворот (Snap Turn) и изменение высоты полета (вверх/вниз).
+*   **Кнопки A / B (Правый контроллер)** — быстрое переключение сцен.
+*   **Указательный палец (Trigger)** — взаимодействие с интерактивными элементами и меню.
 
-## Expanding the ESLint configuration
+## 🏛 Описание обучающих сцен
+1.  **Сравнение архитектур:** Наглядная разница между уязвимым централизованным сервером и отказоустойчивой сетью GovChain.
+2.  **Структура блоков:** Визуализация цепочки блоков, где изменение данных в одном блоке мгновенно делает недействительным весь реестр.
+3.  **ЭЦП и Криптография:** Интерактив с использованием ИИН как публичного ключа и ЭЦП как приватного для доступа к гос. услугам.
+4.  **Энергоэффективность:** Сравнение затрат электроэнергии PoW (Proof of Work) и экологичного PoS (Proof of Stake).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Технологический стек
+*   **Core:** React 19, Three.js, Vite.
+*   **3D Engine:** @react-three/fiber + @react-three/drei (высокая производительность в WebGL).
+*   **VR/XR:** @react-three/xr (поддержка современных гарнитур).
+*   **UI/UX:** Framer Motion, Vanilla CSS для кастомного неонового интерфейса.
+*   **Desktop Wrapper:** Electron (сборка под Windows с поддержкой WebXR).
+
+---
+*Разработано для хакатона BlockNexus 2026.*
